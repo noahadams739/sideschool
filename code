@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Bootcamp Gallery</h1>
+    <div class="gallery" id="gallery">
+        <!-- Images will be added here -->
+    </div>
+    <script>
+        const imageFilenames = [
+            'image1.jpg', 'image2.jpg', 'image3.jpg' // Replace with your actual filenames
+        ];
+
+        const gallery = document.getElementById("gallery");
+        imageFilenames.forEach(filename => {
+            let img = document.createElement("img");
+            img.src = filename;
+            img.alt = "Gallery Image";
+            gallery.appendChild(img);
+        });
+    </script>
+</body>
+</html>
